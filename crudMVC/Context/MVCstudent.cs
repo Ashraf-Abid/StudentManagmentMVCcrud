@@ -11,14 +11,23 @@ namespace crudMVC.Context
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class MVCstudent
     {
         public int ID { get; set; }
+        [Required(ErrorMessage ="requird")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "requird")]
         public string Fname { get; set; }
+        [Required(ErrorMessage = "requird")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "requird")]
+
         public string Mobile { get; set; }
+
+        [Required(ErrorMessage = "requird")]
+       
         public string Description { get; set; }
     }
 }

@@ -27,7 +27,12 @@ namespace crudMVC.Controllers
             obj.Description = model.Description;
             dbObj.MVCstudent.Add(obj);
             dbObj.SaveChanges();
+            ModelState.Clear();
             return View("Student");
+        }
+        public ActionResult StudentList() {
+            var res = dbObj.MVCstudent.ToList();
+            return View(res);
         }
     }
 }
