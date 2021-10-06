@@ -1,0 +1,36 @@
+﻿@model crudMVC.Context.MVCstudent
+@{
+    ViewBag.Title = "Student";
+}
+
+<h2>Student</h2>
+
+@using (Html.BeginForm("AddStudent","Student",FormMethod.Post)) { 
+<div class="container">
+    <div class="form-group">
+        <label>Name</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>FName</label>
+        @Html.TextBoxFor(x => x.Fname, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Mobile</label>
+        @Html.TextBoxFor(x => x.Mobile, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control",@row="10" })
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-primary">Submit</button>
+        <button type="reset" class="btn-danger">Cancel</button>
+    </div>
+</div>
+
+}
