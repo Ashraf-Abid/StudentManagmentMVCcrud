@@ -5,9 +5,10 @@
 
 <h2>Student</h2>
 
-@using (Html.BeginForm("AddStudent","Student",FormMethod.Post)) { 
+@using (Html.BeginForm("AddStudent","Student",FormMethod.Post)) {
 <div class="container">
     <div class="form-group">
+        @Html.HiddenFor(x => x.ID)
         <label>Name</label>
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
     </div>

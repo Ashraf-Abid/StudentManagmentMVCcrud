@@ -23,7 +23,7 @@
             <td>@item.Mobile</td>
             <td>@item.Description</td>
             <td>
-                <a href="#"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href="@Url.Action("Student",new {item.ID,item.Name,item.Fname,item.Email,item.Mobile,item.Description }) "><i class="glyphicon glyphicon-pencil"></i></a>
                 <a href="@Url.Action("Delete",new {item.ID})"><i class="glyphicon glyphicon-trash"></i></a>
             </td>
         </tr>
