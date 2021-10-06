@@ -34,5 +34,13 @@ namespace crudMVC.Controllers
             var res = dbObj.MVCstudent.ToList();
             return View(res);
         }
+        public ActionResult Delete(int id) {
+            var res = dbObj.MVCstudent.Where(x => x.ID == id).First();
+            dbObj.MVCstudent.Remove(res);
+            dbObj.SaveChanges();
+            var list = dbObj.MVCstudent.ToList();
+
+            return View("StudentList",list);
+        }
     }
 }
